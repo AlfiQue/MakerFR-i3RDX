@@ -280,6 +280,7 @@
 //
 #define HEATER_0_PIN                        PB1   // Heater0
 #define HEATER_1_PIN                        PD14  // Heater1
+#define HEATER_2_PIN                        PB0  // Heater2
 #if TEMP_SENSOR_CHAMBER && HOTENDS < 3
   #define HEATER_CHAMBER_PIN                PB0   // Heater2
 #else
@@ -292,15 +293,17 @@
 //
 #define FAN_PIN                             PC8   // Fan0
 #define FAN1_PIN                            PE5   // Fan1
+#define FAN2_PIN                            PE6   // Fan3
+#define FAN3_PIN                            PB0   // Fan3
 
 #ifndef E0_AUTO_FAN_PIN
   #define E0_AUTO_FAN_PIN               FAN1_PIN
 #endif
 
 #if !defined(CONTROLLER_FAN_PIN) && ENABLED(USE_CONTROLLER_FAN) && HOTENDS < 2
-  #define CONTROLLER_FAN_PIN                PE6   // Fan2
+//  #define CONTROLLER_FAN_PIN                PE6   // Fan2
 #else
-  #define FAN2_PIN                          PE6   // Fan2
+//  #define FAN2_PIN                          PE6   // Fan2
 #endif
 
 //
